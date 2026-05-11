@@ -175,12 +175,12 @@ Projector 会自动检测项目文档的语言：
 
 ```
 ╔════════════════════════════════════════════════════════════╗
-║ Projector: 检测到以下模块需要更新文档:                       ║
+║ Projector: 检测到以下模块需要更新文档:                         ║
 ╠════════════════════════════════════════════════════════════╣
 ║   - auth                                                   ║
 ║   - utils                                                  ║
 ╠════════════════════════════════════════════════════════════╣
-║ 运行 /projector update 更新知识库                          ║
+║ 运行 /projector update 更新知识库                            ║
 ╚════════════════════════════════════════════════════════════╝
 ```
 
@@ -194,14 +194,27 @@ Projector 会自动检测项目文档的语言：
 
 ## 支持的语言和框架
 
-| 语言 | 框架 |
-|------|------|
-| JavaScript/TypeScript | React, Vue, Angular, Next.js, Nuxt.js, Express, Fastify |
-| Python | Django, Flask, FastAPI |
-| Rust | Actix, Rocket |
-| Go | Gin, Echo |
-| Java | Spring Boot |
-| Ruby | Rails |
+Projector 是**通用的**，支持任何语言和框架。它通过扫描目录结构和配置文件来识别项目。
+
+以下是已测试的语言和框架：
+
+| 语言 | 常见框架/工具 |
+|------|--------------|
+| JavaScript/TypeScript | React, Vue, Angular, Next.js, Nuxt.js, Express, Fastify, Svelte |
+| Python | Django, Flask, FastAPI, Streamlit |
+| Rust | Actix, Rocket, Axum |
+| Go | Gin, Echo, Fiber |
+| Java | Spring Boot, Maven, Gradle |
+| Ruby | Rails, Sinatra |
+| C# | .NET, ASP.NET |
+| PHP | Laravel, Symfony |
+| Swift | Vapor |
+| Kotlin | Ktor |
+
+即使你的项目不在上述列表中，Projector 仍然可以正常工作。它会：
+- 自动识别项目根目录的配置文件
+- 扫描源代码目录结构
+- 分析模块和组件关系
 
 ## 自定义配置
 
